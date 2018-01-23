@@ -20,24 +20,24 @@ Each vector file should have one word vector per line as follows (space delimite
 
 #### Semantic content evaluation: 
 
-```py
+```bash
 ./qvec_cca.py --in_vectors  ${your_vectors} --in_oracle  oracles/semcor_noun_verb.supersenses.en    
 ```
 To obtain vector column labels, add the --interpret parameter; to print top K values in each dimension add --top K: 
 
-```py
+```bash
 ./qvec.py --in_vectors ${your_vectors} --in_oracle oracles/semcor_noun_verb.supersenses.en --interpret --top 10
 ```
 
 #### Multilingual evaluation for English, Danish, and Italian: 
 
-```py
+```bash
 ./qvec_cca.py --in_vectors  ${your_vectors} --in_oracle   --in_oracle oracles/semcor_noun_verb.supersenses.en,oracles/semcor_noun_verb.supersenses.it,oracles/semcor_noun_verb.supersenses.da 
 ```
 
 #### Syntactic content evaluation: 
 
-```py
+```bash
 ./qvec_cca.py --in_vectors  ${your_vectors} --in_oracle  oracles/ptb.pos_tags    
 ```
 
